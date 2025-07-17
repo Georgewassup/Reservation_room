@@ -1,0 +1,305 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+  -webkit-text-size-adjust: 100%;
+}
+
+*{-webkit-text-size-adjust: 100%;}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.form-section{
+  height: fit-content;
+}
+
+.form-section, .preview-section {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-particulars input, textarea {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-section, .preview-section {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.form-particulars input, textarea {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+
+/* Form */
+.form-particulars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* border: solid; */
+  margin-bottom: -3%;
+
+}
+.form-row2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-right: 40px;
+  margin-bottom: -3%;
+  /* border: solid; */
+}
+
+.form-row p {
+  padding-bottom:10%;
+  width: max-content;/* controls the label width */
+  font-size: 9pt;
+  justify-self: end;
+  justify-content: end;
+  align-self: center;
+  margin-right: 0px;
+  font-weight: bold;
+}
+.form-row2 p {
+  padding-bottom:10%;
+  width: max-content;/* controls the label width */
+  font-size: 9pt;
+  justify-self: end;
+  justify-content: end;
+  align-self: center;
+  margin-right: 0px;
+  font-weight: bold;
+}
+
+.form-row input {
+  justify-self: center;
+  height: 9pt;
+  width: 80%;
+  border: 1px solid #999;
+  background-color: #ffffff;
+}
+.form-row2 input {
+  justify-self: center;
+  height: 9pt;
+  width: 80%;
+  border: 1px solid #999;
+  background-color: #ffffff;
+}
+.form-row2 input {
+  justify-self: center;
+  height: 9pt;
+  width: 80%;
+  border: 1px solid #999;
+  background-color: #ffffff;
+}
+
+.form-grid1{
+  margin-left: 30px;
+}
+
+
+/* INFO */
+.preview-title {
+  font-size: 10pt;
+  font-weight: bold;
+  text-align: center;
+}
+.info p {
+  font-size: 8pt;
+  text-align: center;
+}
+
+.preview-title-info3 {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* ------------------------------------------ Room Reservation ------------------------------ */
+.Room-Reservation{
+  margin-left: 2%;
+  margin-right: 2%;
+
+  /* border: solid; */
+}
+
+.Room-Reservation-title{
+  margin-left: 5%;
+  font-style: italic;
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+.Room-Reservation-Part1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* border: solid;
+  height: 100px; */
+}
+
+.RR-Grid1{
+   margin-left: 30px;
+}
+
+ .RR-Input{
+  font-size: 10pt;
+  outline: none;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5%;
+  padding: 8px;
+  border: none;
+}
+.Room-Reservation-Part2{
+  display: grid; 
+  /* border: solid; */
+  grid-template-columns: 1fr 1fr 1fr 0.2fr;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.Room-Reservation-Part2 p{
+justify-self: center;
+font-size: 9pt;
+font-weight: bold;
+}
+
+/* --------------------------------------- table ---------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 9pt;
+  margin-left: auto; 
+  margin-right: auto;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+
+}
+
+/* tr:nth-child(even) {
+  background-color: #dddddd;
+} */
+
+
+/* -------------------------------------- credit card --------------------------------------- */
+
+
+.Credit-card-types{
+  display: grid; 
+  /* border: solid; */
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-size: 8pt;
+  
+}
+
+.credit-column{
+  display: flex;
+  text-align: center;
+}
+.Credit-card-part2{
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  font-size: 8pt;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.Credit-card-no1{
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  text-align: end;
+  margin-left: 5px;
+  margin-right: 5px;
+  align-items: center;
+  /* border: solid; */
+}
+.Credit-card-no2{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  align-items: center;
+  /* border: solid; */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+} 
+#resume {
+  width: 794px;              /* A4 width */
+  min-height: 1122px;        /* A4 height */
+  background: white;
+  padding: 40px;
+  margin: auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
