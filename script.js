@@ -38,15 +38,48 @@ document.querySelectorAll('input[name="Room_Type"]').forEach(radio => {
   };
   
 // PDF Export
+// function generatePDF() {
+//   const element = document.getElementById("resume");
+//   const opt = {
+//     margin: 0,
+//     filename: 'Meeting_Point_Participants.pdf',
+//     image: { type: 'jpeg', quality: 0.98 },
+//     html2canvas: { scale: 2, useCORS: true },
+//     jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
+//   };
+//   html2pdf().set(opt).from(element).save();
+// }
+
 function generatePDF() {
-  const element = document.getElementById("resume");
-  const opt = {
-    margin: 0,
-    filename: 'Meeting_Point_Participants.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(element).save();
+  // 1. Zoom out to actual size (important for iOS rendering)
+  document.body.style.zoom = "100%";
+
+  // 2. Scroll to the top smoothly
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); // Use 'auto' or 'instant' for immediate effect
+
+  // 3. Give browser time to settle layout (especially on iOS)
+  setTimeout(() => {
+    const element = document.getElementById("resume");
+
+    const opt = {
+      margin: 0,
+      filename: 'Meeting_Point_Participants.pdf',
+      image: { type: 'jpeg', quality: 1 },
+      html2canvas: {
+        scale: 3,
+        useCORS: true,
+        scrollY: 0,
+        scrollX: 0
+      },
+      jsPDF: {
+        unit: 'pt',
+        format: 'a4',
+        orientation: 'portrait'
+      }
+    };
+
+    html2pdf().set(opt).from(element).save();
+  }, 300); // Delay ~300ms for layout to reset properly
 }
+
 
